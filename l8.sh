@@ -5,10 +5,17 @@
 firefox https://search.remotepixel.ca/#5/7/-66
 URL=https://landsat-pds.s3.amazonaws.com/c1/L8/006/054/LC08_L1TP_006054_20180303_20180319_01_T1/LC08_L1TP_006054_20180303_20180319_01_T1_
 
-# Bandas espectrales
-A=B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11
+# Descargar toda la escena con metadatos
+A=$( printf %s  B{1..11}.TIF, )BQA.TIF,MTL.txt
  $( eval echo "wget --mirror --convert-links --page-requisites --no-parent -c  \
- ${URL}B{1..11}.TIF" )
+ ${URL}{${A}}" )
+
+# Solo las Bandas espectrales
+ A=$(echo B{1..11}.TIF,)
+ A=${A%,*} 
+ A=${A// /}
+ $( eval echo "wget --mirror --convert-links --page-requisites --no-parent -c  \
+ ${URL}${A}" )
 
 # MEtadatos y evaluación de calidad
 A=BQA.TIF,MTL.txt
