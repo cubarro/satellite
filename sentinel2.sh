@@ -1,7 +1,7 @@
+# Buscando datos en Sentinel 2
 # Ubico la escena para Venezuela
 firefox https://search.remotepixel.ca/#5/7/-66
 # la escena completa está en una carpeta del AWS
-URL=https://sentinel-s2-l1c.s3.amazonaws.com/tiles/19/P/BK/2016/6/5/0/
 URL=https://sentinel-s2-l1c.s3.amazonaws.com/tiles/19/P/BK/2018/3/17/0/
 
 # Las bandas ESPECTRALES
