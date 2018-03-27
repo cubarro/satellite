@@ -1,6 +1,7 @@
 # Buscando datos de LANDSAT
 
-# Búsqueda con search.remotepixel.ca
+# Ubico la escena para Venezuela
+#  busco con search.remotepixel.ca
 firefox https://search.remotepixel.ca/#5/7/-66
 URL=https://landsat-pds.s3.amazonaws.com/c1/L8/006/054/LC08_L1TP_006054_20180303_20180319_01_T1/LC08_L1TP_006054_20180303_20180319_01_T1_
 
