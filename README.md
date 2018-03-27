@@ -1,5 +1,5 @@
 # satellite
-download satellite data from AWS
+Search and download satellite data, Landsat OLI+TIRS and Sentinel 2, from AWS
 
 Using bash for downloading satellite data freely available in AWS
 
